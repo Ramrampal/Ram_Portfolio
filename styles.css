@@ -1,0 +1,62 @@
+
+:root{
+  --bg:#0b1220; --card:#0f172a; --text:#e2e8f0; --muted:#94a3b8; --brand:#0ea5e9; --brand-2:#38bdf8;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:linear-gradient(180deg,#0b1220, #0b1220 40%, #0a0f1e);color:var(--text);}
+.container{max-width:1100px;margin:0 auto;padding:0 1.2rem}
+.header{position:sticky;top:0;backdrop-filter: blur(8px);background:rgba(11,18,32,.6);border-bottom:1px solid rgba(148,163,184,.15);z-index:50}
+.logo{font-weight:700;letter-spacing:.2px;color:#fff;text-decoration:none}
+.logo span{color:var(--brand)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:.9rem 0}
+.nav-links{display:flex;gap:1rem;list-style:none;margin:0;padding:0}
+.nav-links a{color:var(--muted);text-decoration:none;font-weight:600}
+.nav-links a:hover{color:#fff}
+.nav-toggle{display:none;background:none;border:1px solid rgba(148,163,184,.3);border-radius:10px;padding:.2rem .5rem;color:var(--text)}
+.hero{padding:4.5rem 0 2.5rem}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:2rem;align-items:center}
+.hero-text h1{font-size:clamp(2rem,4.5vw,3.25rem);margin:.2rem 0}
+.tagline{color:var(--muted);font-size:1.05rem;margin-top:.4rem}
+.cta{margin:1.1rem 0;display:flex;gap:.8rem;flex-wrap:wrap}
+.btn{background:linear-gradient(90deg,var(--brand),var(--brand-2));border:none;padding:.75rem 1rem;border-radius:12px;color:#00131f;font-weight:700;text-decoration:none;display:inline-block}
+.btn.outline{background:transparent;color:var(--text);border:1px solid rgba(56,189,248,.6)}
+.btn.small{padding:.55rem .75rem;font-weight:600}
+.links{display:flex;gap:1rem;margin-top:.4rem}
+.links a{color:var(--brand-2);text-decoration:none}
+.hero-photo{display:flex;justify-content:center}
+.hero-photo img{width:min(320px,80%);aspect-ratio:1/1;border-radius:24px;border:1px solid rgba(56,189,248,.3);box-shadow:0 10px 50px rgba(56,189,248,.15)}
+
+.section{padding:2.2rem 0}
+.section h2{font-size:1.6rem;margin:.2rem 0 1rem}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.1rem}
+.card{background:var(--card);border:1px solid rgba(148,163,184,.15);border-radius:16px;padding:1rem}
+.card h3{margin-top:.2rem}
+.muted{color:var(--muted);font-size:.95rem}
+.card ul{margin:.6rem 0 0 1rem}
+.timeline .item{border-left:3px solid var(--brand);padding-left:1rem;margin:0 0 1rem .4rem}
+.timeline .item-header{display:flex;justify-content:space-between;gap:1rem;align-items:baseline}
+.dates{color:var(--muted);font-size:.9rem}
+.skills{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+.skill-group{background:var(--card);border:1px solid rgba(148,163,184,.15);border-radius:16px;padding:1rem}
+.tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.4rem}
+.tag{background:rgba(56,189,248,.12);border:1px solid rgba(56,189,248,.35);padding:.35rem .55rem;border-radius:999px;font-size:.9rem}
+.two-col{columns:2;gap:1.2rem}
+.edu .card{min-height:120px}
+
+.contact-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:1rem;align-items:center}
+.copy{margin-left:.5rem;background:transparent;border:1px solid rgba(148,163,184,.3);color:var(--text);border-radius:10px;padding:.25rem .5rem;cursor:pointer}
+.copy:hover{border-color:var(--brand-2)}
+
+.footer{padding:2rem 0;border-top:1px solid rgba(148,163,184,.15);color:var(--muted);text-align:center}
+.back-to-top{display:inline-block;margin-top:.6rem;color:var(--text);text-decoration:none;border:1px solid rgba(148,163,184,.3);padding:.35rem .6rem;border-radius:10px}
+
+@media (max-width: 900px){
+  .hero-grid{{grid-template-columns:1fr}}
+  .grid{{grid-template-columns:1fr}}
+  .skills{{grid-template-columns:1fr}}
+  .two-col{{columns:1}}
+  .contact-grid{{grid-template-columns:1fr}}
+  .nav-toggle{{display:block}}
+  .nav-links{{display:none;flex-direction:column;gap:.6rem;position:absolute;top:60px;right:16px;background:rgba(11,18,32,.95);padding:1rem;border-radius:12px;border:1px solid rgba(148,163,184,.15)}}
+  .nav-links.show{{display:flex}}
+}
